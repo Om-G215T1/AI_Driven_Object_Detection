@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Object Detection Dashboard</title>
+</head>
+<body style="margin:0; font-family: Arial; background:#f4f6f9;">
+
+<!-- Header -->
+<div style="background:#2c3e50; color:white; padding:15px; text-align:center;">
+    <h1>AI Object Detection System</h1>
+</div>
+
+<h3 style="text-align:center;">Welcome, <span id="username"></span></h3>
+
+<!-- Navigation -->
+<div style="background:#34495e; padding:10px; text-align:center;">
+    <a href="#">Dashboard</a>
+    <a href="#image">Image Detection</a>
+    <a href="#video">Video Detection</a>
+</div>
+
+<!-- Cards -->
+<div style="display:flex; justify-content:space-around; margin:20px;">
+    <div style="background:white; padding:20px; width:25%; text-align:center;">
+        <h3>Total Detections</h3>
+        <p>120</p>
+    </div>
+
+    <div style="background:white; padding:20px; width:25%; text-align:center;">
+        <h3>Images Processed</h3>
+        <p>45</p>
+    </div>
+
+    <div style="background:white; padding:20px; width:25%; text-align:center;">
+        <h3>Videos Processed</h3>
+        <p>12</p>
+    </div>
+</div>
+
+<!-- IMAGE DETECTION -->
+<div style="margin:20px; background:white; padding:20px;">
+    <h2>Image Detection</h2>
+
+    <input type="file" id="imageFile">
+    <button onclick="detectImage()">Detect</button>
+
+    <pre id="imageResult"></pre>
+</div>
+
+<!-- VIDEO DETECTION -->
+<div style="margin:20px; background:white; padding:20px;">
+    <h2>Video Detection</h2>
+
+    <input type="file" id="videoFile">
+    <button onclick="detectVideo()">Detect</button>
+
+    <pre id="videoResult"></pre>
+</div>
+
+<!-- Logout -->
+<div style="text-align:center;">
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+checkAuth();
+loadUser();
+</script>
+
+</body>
+</html>
